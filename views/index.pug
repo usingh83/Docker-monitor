@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 Docker Logs:
+  p Welcome, the docker logs are being collected in the node console #{logs}
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Delete a docker container
+
+        form(method='POST' action='/')
+          div.form-group
+            label(for='id') Docker Id:
+            input#name.form-control(type='text', placeholder='Enter docker id' name='id')
+          button.btn.btn-primary(type='submit') Delete
+
+
+
